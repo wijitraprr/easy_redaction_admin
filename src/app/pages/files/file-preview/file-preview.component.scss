@@ -1,0 +1,115 @@
+h4 {
+    margin-bottom:15px;
+}
+.video {
+    height: 60vh;
+    object-fit: cover;
+}
+.information table {
+    line-height: 1.5;
+    height:560px;
+}
+#video-player {
+    height: 100%;
+    width: fit-content;
+   // margin: auto;
+    padding-bottom: 55px;
+}
+vg-player {
+    vg-scrub-bar,
+    vg-scrub-bar-current-time,
+    vg-scrub-bar-buffering-time {
+        height: 10px;
+    }
+    vg-scrub-bar-current-time .background {
+        background-color: #3498DB;
+    }
+    vg-controls {
+        user-select: none;
+        div.custom {
+            font-style: normal;
+            font-weight: 600;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            width: 50px;
+            font-size: 24px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            color:#fff;
+        }
+        div.custom.disabled {
+            opacity: 0.5;
+            background: none;
+        }
+        div.fa-file-image,
+        div.fa-file-audio {
+            font-size: 15pt;
+            padding-top: 5px;
+        }
+        .time-separator {
+            padding-top: 16px;
+        }
+        vg-volume .volumeBar {
+            margin-right: 10px;
+        }
+    }
+}
+:-webkit-full-screen-ancestor {
+    .icons,
+    .div-bookmark,
+    .icons,
+    .div-metadata {
+        z-index: -1 !important;
+    }
+}
+:-moz-full-screen-ancestor {
+    .icons,
+    .div-bookmark,
+    .icons,
+    .div-metadata {
+        z-index: -1 !important;
+    }
+}
+:-ms-fullscreen-ancestor {
+    .icons,
+    .div-bookmark,
+    .icons,
+    .div-metadata {
+        z-index: -1 !important;
+    }
+}
+:-webkit-full-screen {
+    z-index: 2147483646 !important;
+}
+:-webkit-full-screen-ancestor {
+    .div-map {
+        z-index: 2147483647 !important;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        .card {
+            .card-header {
+                display: none;
+            }
+            .card-body {
+                padding: 0px;
+            }
+        }
+        .map {
+            padding: 25px;
+        }
+        agm-map {
+            height: 350px;
+        }
+    }
+}

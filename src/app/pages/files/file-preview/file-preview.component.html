@@ -1,0 +1,98 @@
+<div class="col-md-12">
+        <nb-card>
+          <nb-card-header>File Name</nb-card-header>
+          <nb-card-body>
+            <div class="row">
+              <div class="col-lg-8">
+                <nb-card>
+                  <nb-card-header>Preview</nb-card-header>
+                  <nb-card-body>                                          
+                            <vg-player>
+                                <vg-overlay-play></vg-overlay-play>
+                                <vg-buffering></vg-buffering>
+                                <vg-scrub-bar>
+                                    <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                                    <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+                                </vg-scrub-bar>
+                                <vg-controls>
+                                    <vg-play-pause></vg-play-pause>
+                                    <!-- <vg-time-display vgProperty="left" vgFormat="mm:ss"></vg-time-display> -->
+                                    <vg-time-display></vg-time-display>
+                                    <div title="Snapshot" class="icon custom fa fa-camera-retro" aria-hidden="true" role="button"></div>
+                                    <div title="Crop" class="icon custom fa fa-crop" aria-hidden="true" role="button"></div>
+                                    <div title="Redact" class="icon custom fa fa-edit" aria-hidden="true" role="button"></div>
+                                    <div title="Extract Frame" class="icon custom fa fa-file-image" aria-hidden="true"
+                                        role="button"></div>
+                                    <div title="Extract Audio" class="icon custom fa fa-file-audio" aria-hidden="true"
+                                        role="button"></div>
+                                    <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
+                                    <!-- <vg-track-selector></vg-track-selector> -->
+                                    <vg-mute></vg-mute>
+                                    <vg-volume></vg-volume>
+                                    <vg-fullscreen></vg-fullscreen>
+                                    <!-- <vg-scrub-bar-trimmer></vg-scrub-bar-trimmer> -->
+                                </vg-controls>
+                                <video #myMedia [vgMedia]="myMedia" [vgMaster]="true" id="my-video" autoplay="false"
+                                    preload="auto" crossorigin>
+                                    <source src="/assets/images/video0.mp4" type="video/mp4">
+                                </video>
+                            </vg-player>
+                      
+                  </nb-card-body>
+                </nb-card>
+              </div>
+              <div class="col-lg-4 information">
+                <nb-card>
+                  <nb-card-header>File Information</nb-card-header>
+                  <nb-card-body>
+                        <table style="width: 100%;" cellpadding="2">
+                                <tbody>
+                                <tr>
+                                <td><strong>Title:</strong></td>
+                                <td>Sample Video</td>
+                                </tr>
+                                <tr>
+                                <td><strong>Duration:</strong></td>
+                                <td>00.12.56</td>
+                                </tr>
+                                <tr>
+                                <td><strong>Resolution:</strong></td>
+                                <td>1080 x 720</td>
+                                </tr>
+                                <tr>
+                                <td><strong>Size:</strong></td>
+                                <td>24MB</td>
+                                </tr>
+                                <tr>
+                                <td><strong>Type:</strong></td>
+                                <td>MP4</td>
+                                </tr>
+                                <tr>
+                                <td><strong>Status:</strong></td>
+                                <td>REDACTED</td>
+                                </tr>
+                                <tr>
+                                <td><strong>Uploaded Date:</strong></td>
+                                <td>Nov-23-2018 14:22:03</td>
+                                </tr>
+                                <tr>
+                                <td><strong>Modified Date:</strong></td>
+                                <td>Nov-23-2018 14:22:03</td>
+                                </tr>
+                                <tr>
+                                <td><strong>File Location:</strong></td>
+                                <td>/MyVideo</td>
+                                </tr>
+                                <tr>
+                                <td><strong>Uploaded By:</strong></td>
+                                <td>Adam (adam@en.com)</td>
+                                </tr>
+                                </tbody>
+                                </table>
+                  </nb-card-body>
+                </nb-card>
+              </div>
+            </div>
+            </nb-card-body>
+        </nb-card>
+      </div>

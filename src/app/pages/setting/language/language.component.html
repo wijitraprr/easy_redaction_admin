@@ -1,0 +1,37 @@
+<div class="col-md-12">
+  <nb-card>
+    <nb-card-body>
+      <div class="row">
+        <div class="col-sm-6 header">
+          <nb-card-header>
+            Language Setting
+          </nb-card-header>
+        </div>
+        <div class="col-sm-6 dowload-button">
+          <button class="btn btn-primary btn-icon" type="button" title="Download" (click)="downloadTemplate()"><i class="fas fa-download"></i></button>
+        </div>
+        <div class="col-sm-6">
+          <form class="form-horizontal" novalidate>
+            <div class="form-group">
+              <div class="input-group">
+                <ba-file-uploader name="languageFile" [fileUploaderOptions]="fileUploaderOptions"
+                  (onFileUploadCompleted)="onUploadCompleted($event)">
+                </ba-file-uploader>
+
+                <!--  <input type="text" class="form-control" placeholder="">
+                  <span class="input-group-append">
+                    <button class="btn btn-primary input-group-text">
+                      Browse
+                    </button>
+                  </span> -->
+              </div>
+            </div>
+          </form>
+
+
+        </div>
+      </div>
+      <!-- <button type="submit" class="btn btn-primary">Upload</button> -->
+    </nb-card-body>
+  </nb-card>
+</div>

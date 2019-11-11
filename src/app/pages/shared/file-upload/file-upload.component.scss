@@ -1,0 +1,94 @@
+  :host /deep/ {
+      .dragarea {
+          font-size: 24px;
+          border: 2px dashed #bbb;
+          padding: 100px;
+          background-color: #fff; 
+          color: #bbb;
+          border-radius: 5px;
+          width:100%;
+          line-height: 18pt;
+      }
+      .droparea {
+          font-size: 24px;
+          border: 2px dashed #bbb;
+          padding: 100px;
+          background-color: #eff;
+          color: #aaa;
+          border-radius: 5px;
+          width:100%;
+      }
+      .click-to-browse {
+          margin-bottom:15px;
+          margin-top:15px;
+      }
+      file-upload {
+          z-index: 9999;
+          width:100%;
+      }
+      div.overlay {
+          div.waiting-overlay {
+              z-index: 10000;
+              border: none;
+              margin: 0px;
+              padding: 0px;
+              width: 100%;
+              height: 100%;
+              top: 0px;
+              left: 0px;
+              background-color: rgb(0, 0, 0);
+              opacity: 0.6;
+              cursor: wait;
+              position: fixed;
+          }
+          div.waiting-message {
+              z-index: 10002;
+              position: fixed;
+              padding: 10px 0px;
+              margin: 0px;
+              width: 100%;
+              top: calc(100vh - 50%);
+              left: calc(100vw - 60%);
+              text-align: center;
+              color: rgb(0, 0, 0);
+              background-color: rgb(255, 255, 255);
+              cursor: wait;
+              border-radius: 5px;
+              max-width: 410px;
+              .loading-img {
+                  margin-right: 5px;
+                  height: 25px;
+              }
+              .loading-text {
+                  display: inline-block;
+                  margin-bottom: 5px;
+                  margin-top: 5px;
+              }
+          }
+      }
+      .file-support-type {
+          color: #e85656;
+          font-size: 11pt;
+          margin-top: 15px;
+      }
+      tr.duplicated {
+          td {
+              color: red;
+          }
+     }
+
+     @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+         .row {
+            margin-right: -20px !important;
+            margin-left: -40px !important;
+            text-align: center !important;
+         }   
+         .text-center {
+            text-align: center !important;
+            padding:10px !important;
+         }  
+         a {
+            margin-top:10px !important; 
+         }      
+      }
+   }

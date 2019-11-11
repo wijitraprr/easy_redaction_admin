@@ -1,0 +1,34 @@
+div.status-custom-button {
+    max-width:100px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    font-weight: 500;
+    font-family: Exo;
+    border: 2px solid transparent;
+    -webkit-transition: none;
+    transition: none;
+    cursor: default;
+    padding:3px;
+    font-size: 1rem;
+    line-height: 1.25;
+    border-radius: 0.75rem;
+    margin:auto auto;
+    display:block;
+    text-align: center !important;
+    span {
+        color: #fff;
+        text-align:center !important;
+        max-width:100px;
+    }
+}
+
+div.active {
+    background: #8bd22f;
+    
+}
+div.inactive {
+    background: #f95372;
+    
+}
+

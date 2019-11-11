@@ -1,0 +1,165 @@
+.flex-centered {
+    margin: auto;
+  }
+  nb-card-body {
+    display: flex;
+  }
+  
+  .title {
+    text-align: center;
+  }
+  
+  .sub-title {
+    text-align: center;
+    display: block;
+    margin-bottom: 3rem;
+  }
+  
+  .btn {
+    margin-bottom: 2rem;
+  }
+  ng2-smart-table {
+    width: 100%;
+  }
+  
+  :host /deep/ {
+    i {
+      color:#a4abb3!important;
+    }
+    .img-thumnail {
+     text-align: center;
+     margin-top: 5px;
+     a,
+     div {
+         position: relative;
+         display: inline-block;
+         cursor: pointer;
+         &:before {
+             position: absolute;
+             top: 50%;
+             left: 50%;
+             transform: translate(-50%, -50%);
+             -webkit-transform: translate(-50%, -50%);
+             content: "\f144";
+             font-family: 'Font Awesome 5 Free' !important;
+             font-size: 40px;
+             color: #fff;
+             opacity: 0.5;
+             z-index: 1;
+         }
+         &:hover:before {
+             color: #eee;
+         }
+     }
+     .picture {
+         max-width:100px;
+     }
+     div {
+         cursor: default;
+     }
+  }
+  .icon .ion-edit {
+     float:left;
+  }
+  .icon {
+     padding:5px;
+     text-align: center;
+  }
+  .icon .ng2-smart-action.ng2-smart-action-edit-edit {
+     padding-right: 10px;
+  }
+  ng2-smart-table td {
+     font-size:16px !important;
+  }
+  th:first-child {
+     text-align: center;
+  }
+  th:last-child {
+    text-align: center;
+    width:50px; 
+   }
+  th.ng2-smart-th.checked {
+     width:50px !important;
+  }
+  
+  nb-checkbox .customised-control {
+     padding:0px !important;
+  }
+  .fa {
+     color:#A4ABB3 !important;
+   }
+   .fa:hover {
+       color:#fff !important;
+   }
+  }
+  nb-layout.window-mode .scrollable-container {
+     max-width: 100% !important;
+  }
+  .thumbnail.video {
+          text-align: center;
+          margin-top: 5px;
+          a,
+          div {
+              position: relative;
+              display: inline-block;
+              cursor: pointer;
+              &:before {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  -webkit-transform: translate(-50%, -50%);
+                  content: "\f144";
+                  font-family: 'Font Awesome 5 Free' !important;
+                  font-size: 50px;
+                  color: #fff;
+                  opacity: 0.5;
+                  z-index: 1;
+              }
+              &:hover:before {
+                  color: #eee;
+              }
+          }
+          div {
+              cursor: default;
+          }
+      }
+  
+      /*------------pagination---------------------*/
+      .ng2-smart-pagination-nav {
+         -webkit-user-select: none;
+         -moz-user-select: none;
+         -ms-user-select: none;
+         user-select: none;
+         margin: auto auto;
+         display: table;
+         margin-top: 0px !important;
+         margin-right: 0px !important;
+         width: 100%;
+         padding-top: 20px;
+         padding-bottom: 20px;
+         
+     }
+     .ng2-smart-pagination {
+         /* width: 0px; */
+         width: fit-content;
+         margin: auto auto;
+     }
+     div.action-icon div.right {
+         text-align: right;
+         padding-top: 4px;
+     }
+     .ng2-smart-pagination-nav  {
+         font-family: Exo;
+         font-size: 1rem;
+         line-height: 1.25;
+         border-radius: 0.17rem;
+     }
+     .ng2-smart-page-item.page-item a {
+         padding:15px;
+         color:#000 !important;
+     }
+     .page-item.active .page-link {
+         background-color:#73a1ff !important;
+         border: 1px solid #73a1ff !important;
+     }

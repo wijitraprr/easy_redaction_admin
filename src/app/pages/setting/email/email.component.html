@@ -1,0 +1,114 @@
+<div class="col-md-12">
+  <nb-card>
+    <nb-card-header>
+      SMTP Server Setting
+    </nb-card-header>
+    <nb-card-body>
+      <form #smtpSettingForm="ngForm" autocomplete="off" novalidate (submit)="onSaveSmtpSetting(smtpSettingForm.value, smtpSettingForm.valid)">
+
+      
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="serverHost">Sever Host IP:</label>
+            <input type="text" class="form-control" [ngClass]="{'form-control-danger': (serverHost.touched || smtpSettingFormSubmitted) && serverHost.errors }" 
+              id="serverHost" name="serverHost" placeholder="IP Address" 
+              required ngModel #serverHost="ngModel" [(ngModel)]="emailConfig.serverHost" maxlength="200" autocomplete="off">
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="userName">Username:</label>
+            <input [disabled]="!emailConfig.requireAuthentication" type="text" class="form-control"  [ngClass]="{'form-control-danger': (userName.touched || smtpSettingFormSubmitted) && userName.errors }"
+              id="userName" name="userName" placeholder="Username"
+              [required]="emailConfig.requireAuthentication" ngModel #userName="ngModel" #userName="ngModel" [(ngModel)]="emailConfig.userName" 
+              maxlength="200" autocomplete="off">
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="smtpPort">Port:</label>
+            <input type="text" class="form-control" [ngClass]="{'form-control-danger': (smtpPort.touched || smtpSettingFormSubmitted) && smtpPort.errors }" id="smtpPort" name="smtpPort" placeholder="Port Number"
+              required ngModel #smtpPort="ngModel" [(ngModel)]="emailConfig.smtpPort" maxlength="200" autocomplete="off">
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input [disabled]="!emailConfig.requireAuthentication" type="password" class="form-control" [ngClass]="{'form-control-danger': (password.touched || smtpSettingFormSubmitted) && password.errors }" id="password" name="password" 
+              placeholder="Password" [required]="emailConfig.requireAuthentication"
+              ngModel #password="ngModel" [(ngModel)]="emailConfig.password" maxlength="200" autocomplete="off">
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <p>Encryption:</p>
+          <label class="custom-control custom-radio">
+            <input ngModel required name="encryption" type="radio" value="None" [(ngModel)]="emailConfig.encryption" class="custom-control-input">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">None</span>
+          </label>
+          <label class="custom-control custom-radio">
+            <input ngModel required name="encryption" type="radio" value="SSL" [(ngModel)]="emailConfig.encryption" class="custom-control-input">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">SSL</span>
+          </label>
+          <label class="custom-control custom-radio">
+            <input ngModel required name="encryption" type="radio" value="TLS" [(ngModel)]="emailConfig.encryption" class="custom-control-input">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">TLS</span>
+          </label> 
+            </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="senderDisplayName">Sender Display Name:</label>
+            <input type="text" class="form-control" [ngClass]="{'form-control-danger': (senderDisplayName.touched || smtpSettingFormSubmitted) && senderDisplayName.errors }" id="senderDisplayName" name="senderDisplayName" placeholder="Sender Display Name"
+              required ngModel #senderDisplayName="ngModel" [(ngModel)]="emailConfig.senderDisplayName"
+              maxlength="200" autocomplete="off" >
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <nb-checkbox (change)="onChange($event)" ngModel name="requireAuthentication" [value]="emailConfig.requireAuthentication">Require Authentication</nb-checkbox>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="senderEmail">Sender Email:</label>
+            <input type="email" class="form-control" [ngClass]="{'form-control-danger': (senderEmail.touched || smtpSettingFormSubmitted) && senderEmail.errors }" id="senderEmail" name="senderEmail" placeholder="Sender Email" ngModel
+              pattern="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" required #senderEmail="ngModel">
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary right">Cancel</button>
+      </form>
+    </nb-card-body>
+  </nb-card>
+</div>
+
+<div class="col-md-12">
+  <nb-card>
+    <nb-card-header>
+      Test Email Setting
+    </nb-card-header>
+    <nb-card-body>
+        <form #testEmailSettingForm="ngForm" autocomplete="off" class="form-horizontal" novalidate (submit)="onTestEmailSetting(testEmailSettingForm.value, testEmailSettingForm.valid)">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="sendToEmail">Send To Email:</label>
+            <input type="text" class="form-control" [ngClass]="{'form-control-danger': (sendToEmail.touched || testEmailSettingFormSubmitted) && sendToEmail.errors }" id="sendToEmail" name="sendToEmail" placeholder="Send To Email" ngModel
+              pattern="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" required #sendToEmail="ngModel">
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label>Message:</label>
+            <textarea class="form-control" [ngClass]="{'form-control-danger': (message.touched || testEmailSettingFormSubmitted) && message.errors }" id="message" name="message" required ngModel #message="ngModel" placeholder="Message"></textarea>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+
+    </nb-card-body>
+  </nb-card>
+</div>

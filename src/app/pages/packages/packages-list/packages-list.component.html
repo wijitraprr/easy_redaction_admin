@@ -1,0 +1,16 @@
+<div class="col-md-12">
+    <nb-card>
+        <nb-card-header>Packages</nb-card-header>
+        <nb-card-body>
+            <div class="row col-md-12">
+                <div class="row col-md-12">
+                        <a href="#/pages/packages/package-add"> <button type="button" class="btn btn-primary btn-icon">
+                        <i class="fas fa-plus"><span> Add</span></i>
+                    </button></a>
+                </div>
+                <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
+                </ng2-smart-table>
+            </div>
+        </nb-card-body>
+    </nb-card>
+</div>

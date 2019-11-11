@@ -1,0 +1,66 @@
+<div class="col-md-12">
+    <nb-card>
+        <nb-card-header>
+            Add Package
+        </nb-card-header>
+        <nb-card-body>
+            <form #packageForm="ngForm" class="form-horizontal" novalidate (submit)="addPackage(packageForm.value, packageForm.valid)">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="packageName">Package Name</label>
+                        <input type="text" class="form-control" [ngClass]="{'form-control-danger': (packageName.touched || submitted) && packageName.errors }" id="packageName" name="packageName" ngModel required #packageName="ngModel" placeholder="Package Name">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="packageType">Package Type</label>
+                        <select class="form-control" [ngClass]="{'form-control-danger': (packageType.touched || submitted) && packageType.errors }" id="packageType" name="packageType" ngModel #packageType="ngModel" required (change)="onChange($event)">
+                            <option value="">Select Package Type</option>
+                            <option value="storage">Storage</option>
+                            <option value="duration">Duration</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="duration">Duration</label>
+                        <input type="text" class="form-control" [ngClass]="{'form-control-danger': (duration.touched || submitted) && duration.errors }" [required]="packageType.value == 'duration'" [disabled]="packageType.value == '' || packageType.value == 'storage'" customMin="1" customMax="1380" id="duration" name="duration" ngModel #duration="ngModel" placeholder="Duration in Minutes">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="storageSize">Storage Size</label>
+                        <input type="text" class="form-control" [ngClass]="{'form-control-danger': (storage.touched || submitted) && storage.errors }" [required]="packageType.value == 'storage'" [disabled]="packageType.value == '' || packageType.value == 'duration'" pattern="\d+" id="storageSize" name="storageSize" ngModel #storage="ngModel" placeholder="Storage Size in GB">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="price">Price</label>
+                        <input type="text" class="form-control" [ngClass]="{'form-control-danger': (price.touched || submitted) && price.errors }" id="price" name="price" ngModel required #price="ngModel" placeholder="Price in $">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <p>Status:</p>
+                    <label class="custom-control custom-radio">
+                        <input ngModel name="status" type="radio" value="active" [(ngModel)]="selectedStatus" class="custom-control-input">
+                        <span class="custom-control-indicator"></span>
+                        <span class="custom-control-description">Active</span>
+                    </label>
+                    <label class="custom-control custom-radio">
+                        <input ngModel name="status" type="radio" value="inactive" [(ngModel)]="selectedStatus" class="custom-control-input">
+                        <span class="custom-control-indicator"></span>
+                        <span class="custom-control-description">Inactive</span>
+                    </label>
+                </div>
+            </div>
+        </form>
+        </nb-card-body>
+    </nb-card>
+</div>
+<div class="button">
+    <ul>
+        <li><button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button></li>
+        <li><button type="submit" class="btn btn-primary" (click)="onCancel()">Cancel</button></li>
+    </ul>
+</div>
