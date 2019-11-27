@@ -54,7 +54,6 @@ import { CountryOrdersMapComponent } from '../e-commerce/country-orders/map/coun
 import { CountryOrdersChartComponent } from '../e-commerce/country-orders/chart/country-orders-chart.component';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { CountryOrdersMapService } from '../e-commerce/country-orders/map/country-orders-map.service';
-import { MapsModule } from '../maps/maps.module';
 import { SearchMapComponent } from './search-map/search-map.component';
 
 
@@ -64,8 +63,7 @@ import { SearchMapComponent } from './search-map/search-map.component';
     ThemeModule,
     NgxEchartsModule,
     LeafletModule,
-    MapsModule
-    
+       
   ],
   declarations: [
     DashboardComponent,
@@ -117,8 +115,7 @@ import { SearchMapComponent } from './search-map/search-map.component';
     EarningCardBackComponent,
     EarningPieChartComponent,
     EarningLiveUpdateChartComponent,
-    SearchMapComponent
-    
+       
    ],
   providers: [
     CountryOrdersMapService,
