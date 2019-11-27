@@ -1,0 +1,106 @@
+.flex-centered {
+  margin: auto;
+}
+nb-card-body {
+  display: flex;
+}
+
+.title {
+  text-align: center;
+}
+
+.sub-title {
+  text-align: center;
+  display: block;
+  margin-bottom: 3rem;
+}
+
+.btn {
+  margin-bottom: 2rem;
+}
+ng2-smart-table {
+  width: 100%;
+}
+
+:host /deep/ {
+  i {
+    color:#a4abb3!important;
+  }
+  .img-thumnail {
+   text-align: center;
+   margin-top: 5px;
+   padding:0px !important;
+  }
+  img.picture {
+    max-width:50px;
+  }
+  .icon .ion-edit {
+    float:left;
+   
+ }
+ .icon {
+    padding:5px;
+    
+ }
+ .icon .ng2-smart-action.ng2-smart-action-edit-edit {
+    padding-right: 10px;
+ }
+ ng2-smart-table td {
+    font-size:16px !important;
+ }
+ th:first-child {
+    text-align: center;
+    width:20px !important;
+ }
+ th:last-child {
+  text-align: center;
+  width:50px; 
+ }
+ th.ng2-smart-th.checked {
+    width:20px !important;
+ }
+ nb-checkbox .customised-control {
+  padding:0px !important;
+}
+ng2-smart-table tr td:last-child {
+  text-align: center;
+}
+}
+    /*------------pagination---------------------*/
+    .ng2-smart-pagination-nav {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      margin: auto auto;
+      display: table;
+      margin-top: 0px !important;
+      margin-right: 0px !important;
+      width: 100%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      
+  }
+  .ng2-smart-pagination {
+      /* width: 0px; */
+      width: fit-content;
+      margin: auto auto;
+  }
+  div.action-icon div.right {
+      text-align: right;
+      padding-top: 4px;
+  }
+  .ng2-smart-pagination-nav  {
+      font-family: Exo;
+      font-size: 1rem;
+      line-height: 1.25;
+      border-radius: 0.17rem;
+  }
+  .ng2-smart-page-item.page-item a {
+      padding:15px;
+      color:#000 !important;
+  }
+  .page-item.active .page-link {
+      background-color:#73a1ff !important;
+      border: 1px solid #73a1ff !important;
+  }

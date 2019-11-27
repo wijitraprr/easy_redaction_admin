@@ -5,11 +5,11 @@ import { CheckboxButtonViewComponent } from '../shared/smart-table-custom/checkb
 import { StatusButtonViewComponent } from '../shared/status-button/status-button-view.component';
 
 @Component({
-  selector: 'subscribers',
-  styleUrls: ['./subscribers.component.scss'],
-  templateUrl: './subscribers.component.html',
+  selector: 'vassels',
+  styleUrls: ['./vassels.component.scss'],
+  templateUrl: './vassels.component.html',
 })
-export class SubscribersComponent {
+export class VasselsComponent{
 
   _common: any;
   onDelete(arg0: any): any {
@@ -53,24 +53,28 @@ export class SubscribersComponent {
         filter: false,
         valuePrepareFunction: (cell, row) => {
           //return '<img class="img-thumnail" src="../assets/images/camera3.jpg"/>';
-          return '<div class="img-thumnail"><a href="#"><img class="picture" src="../assets/images/no-photo.png"/></a></div>'
+          return '<div class="img-thumnail"><a href="#"><img class="picture" src="../assets/images/ship.png"/></a></div>'
         }
 
-      },
-      email: {
-        title: 'Email',
-        type: 'string',
       },
       firstName: {
         title: 'Name',
         type: 'string',
       },
+      imoNumber: {
+        title: 'IMO',
+        type: 'string',
+      },
+      trackingId: {
+        title: 'Tracking ID',
+        type: 'string',
+      },
+      email: {
+        title: 'Email',
+        type: 'string',
+      },
       organization: {
         title: 'Organization',
-        type: 'string'
-      },
-      subscription: {
-        title: 'Subscription',
         type: 'string'
       },
       isActive: {
@@ -100,16 +104,7 @@ export class SubscribersComponent {
           return false;
         }
       },
-      actions: {
-        title: 'Actions',
-        class: 'ng2-smart-actions',
-        type: 'html',
-        filter: false,
-        sort: false,
-        valuePrepareFunction: (cell, row) => {
-          return `<div class="icon"><a class= "ng2-smart-action ng2-smart-action-edit-edit"><a href="#/pages/my-files/my-files-edit"><i class="ion-edit" title="Edit" ></i></a><a class="ng2-smart-action ng2-smart-action-delete-delete" title="Delete"><i class="ion-trash-a"></i></a></div>`
-        },
-      },
+     
     }
   };
 

@@ -54,12 +54,18 @@ import { CountryOrdersMapComponent } from '../e-commerce/country-orders/map/coun
 import { CountryOrdersChartComponent } from '../e-commerce/country-orders/chart/country-orders-chart.component';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { CountryOrdersMapService } from '../e-commerce/country-orders/map/country-orders-map.service';
+import { MapsModule } from '../maps/maps.module';
+import { SearchMapComponent } from './search-map/search-map.component';
+
+
 
 @NgModule({
   imports: [
     ThemeModule,
-    NgxEchartsModule,   
-    LeafletModule 
+    NgxEchartsModule,
+    LeafletModule,
+    MapsModule
+    
   ],
   declarations: [
     DashboardComponent,
@@ -111,7 +117,9 @@ import { CountryOrdersMapService } from '../e-commerce/country-orders/map/countr
     EarningCardBackComponent,
     EarningPieChartComponent,
     EarningLiveUpdateChartComponent,
-  ],
+    SearchMapComponent
+    
+   ],
   providers: [
     CountryOrdersMapService,
   ],

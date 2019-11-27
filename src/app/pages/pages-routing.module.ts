@@ -13,30 +13,20 @@ const routes: Routes = [
       path: 'dashboard',
       component: DashboardComponent,
     }, {
-      path: 'setting',
-      loadChildren: './setting/setting.module#SettingModule',
-    }, {
-      path: 'analytics',
-      loadChildren: './analytics/analytics.module#AnalyticsModule',
+      path: 'reports',
+      loadChildren: './reports/reports.module#ReportsModule',
     },
     {
-      path: 'subscribers',
-      loadChildren: './subscribers/subscribers.module#SubscribersModule',
+      path: 'vassels',
+      loadChildren: './vassels/vassels.module#VasselsModule',
     },
     {
-      path: 'files',
-      loadChildren: './files/files.module#FilesModule',
+      path: 'ports',
+      loadChildren: './ports/ports.module#PortsModule',
     },
     {
-      path: 'packages',
-      loadChildren: './packages/packages.module#PackagesModule',
-    },
-    {
-      path: 'payments',
-      loadChildren: './payments/payments.module#PaymentsModule',
-    }, {
-      path: 'security',
-      loadChildren: './security/security.module#SecurityModule',
+      path: 'maps',
+      loadChildren: './maps/maps.module#MapsModule',
     },
     {
       path: 'support',

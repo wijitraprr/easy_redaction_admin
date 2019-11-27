@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AnalyticsComponent } from './analytics.component';
+import { PortsComponent } from './ports.component';
+
 
 
 
 const routes: Routes = [{
   path: '',
-  component: AnalyticsComponent,
+  component: PortsComponent,
   }];
 
 @NgModule({
@@ -18,11 +19,11 @@ const routes: Routes = [{
   ],
 })
 
-export class AnalyticsRoutingModule { }
+export class PortsRoutingModule { }
 
 
 export const routedComponents = [
 
-  AnalyticsComponent,
+  PortsComponent,
   
 ];

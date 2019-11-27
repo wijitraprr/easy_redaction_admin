@@ -8,58 +8,44 @@ export const MENU_ITEMS: NbMenuItem[] = [
     home: true,
   },
   {
-    title: 'Subscribers',
-    icon: 'fa fa-users',
-    link: '/pages/subscribers',
+    title: 'Vessels',
+    icon: 'fa fa-ship',
+    link: '/pages/vassels',
   },
   {
-    title: 'Files',
-    link: '/pages/files/file-list',
-    icon: 'fa fa-film',
+    title: 'Ports',
+    link: '/pages/ports',
+    icon: 'fa fa-flag',
   },
   {
-    title: 'Payments',
-    link: '/pages/payments',
-    icon: 'fa fa-money-bill-alt',
-  },
-  {
-    title: 'Analytics',
-    icon: 'fa fa-chart-bar',
-    link: '/pages/analytics',
-  },
-  {
-    title: 'Security',
-    icon: 'fa fa-shield-alt',
+    title: 'Maps',
+    icon: 'fa fa-map-marked-alt',
+    link: '/pages/maps/searchmap',
     children: [
       {
-        title: 'Activity Logs',
-        link: '/pages/security/activity-log',
-        icon: 'fa fa-user-secret',
+        title: 'Google Maps',
+        link: '/pages/maps/gmaps',
       },
       {
-        title: 'Sessions',
-        link: '/pages/security/sessions',
-        icon: 'fa fa-id-card',
+        title: 'Leaflet Maps',
+        link: '/pages/maps/leaflet',
+      },
+      {
+        title: 'Bubble Maps',
+        link: '/pages/maps/bubble',
+      },
+      {
+        title: 'Search Maps',
+        link: '/pages/maps/searchmap',
       },
     ],
   },
   {
-    title: 'Support',
-    icon: 'fa fa-life-ring',
-    children: [
-      {
-        title: 'Feedbacks',
-        link: '/pages/support/feedback',
-        icon: 'fa fa-comment',
-      },
-      {
-        title: 'Tickets',
-        link: '/pages/support/tickets',
-        icon: 'fa fa-ticket-alt',
-      },
-    ],
+    title: 'Report',
+    icon: 'fa fa-file-alt',
+    link: '/pages/reports',
   },
-  {
+   {
     title: 'Log out',
     icon: 'fa fa-sign-out-alt',
     link: '/pages/logout',

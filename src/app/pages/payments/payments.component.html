@@ -1,9 +1,9 @@
 <div class="col-md-12">
   <nb-card>
-    <nb-card-header>Transactions</nb-card-header>
+    <nb-card-header>Map</nb-card-header>
     <nb-card-body>
-      <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
-      </ng2-smart-table>
+      <ngx-search (positionChanged)="updateLocation($event)"></ngx-search>
+    <ngx-map [searchedLocation]="searchedLocation"></ngx-map>
       </nb-card-body>
   </nb-card>
 </div>

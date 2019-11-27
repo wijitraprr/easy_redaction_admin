@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { ThemeModule } from '../../@theme/theme.module';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { SmartTableService } from '../../@core/data/smart-table.service';
-import { routedComponents, SubscribersRoutingModule } from './subscribers-routing.module';
+import { routedComponents, VasselsRoutingModule } from './vassels-routing.module';
 
 
 @NgModule({
   imports: [
     ThemeModule,
-    SubscribersRoutingModule,
+    VasselsRoutingModule,
     Ng2SmartTableModule,
   ],
   declarations: [
@@ -18,4 +18,4 @@ import { routedComponents, SubscribersRoutingModule } from './subscribers-routin
     SmartTableService,
   ],
 })
-export class SubscribersModule { }
+export class VasselsModule { }
